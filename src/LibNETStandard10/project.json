@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "NETStandard.Library": {
+	  "version": "1.0.0-rc2-*"
+	}
+  },
+  "frameworks": {
+    "netstandard1.0": { 
+	  "imports": [
+	    "dotnet5.1",
+	    "portable-win81+wp81",
+		"portable-net45+wp8",
+		"portable-net45+win8+wp8",
+		"portable-wp81+wpa81",
+		"portable-win81+wp81+wpa81",
+		"portable-net45+win8+wpa81+wp8"
+	  ]
+	}
+  }
+}

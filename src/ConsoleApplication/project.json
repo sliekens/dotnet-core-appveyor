@@ -8,7 +8,12 @@
       "type": "platform",
       "version": "1.0.0-rc2-*"
     },
-	"ClassLibrary": { "target": "project" }
+	"LibNETStandard10": { "target": "project" },
+	"LibNETStandard11": { "target": "project" },
+	"LibNETStandard12": { "target": "project" },
+	"LibNETStandard13": { "target": "project" },
+	"LibNETStandard14": { "target": "project" },
+	"LibNETStandard15": { "target": "project" }
   },
   "frameworks": {
     "netcoreapp1.0": {
