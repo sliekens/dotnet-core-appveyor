@@ -5,8 +5,8 @@
       "type": "platform",
       "version": "1.0.0-rc2-*"
     },
-	"xunit": "2.1.0-rc2-*",
-	"dotnet-test-xunit": "1.0.0-rc2-*"
+    "xunit": "2.1.0-rc2-*",
+    "dotnet-test-xunit": "1.0.0-rc2-*"
   },
   "frameworks": {
     "netcoreapp1.0": {
