@@ -14,8 +14,8 @@ environment:
 build_script:
 - appveyor-retry dotnet restore -v Minimal
 - dotnet build **\project.json -c %CONFIGURATION%
-- dotnet pack --no-build --version-suffix %LABEL% -o artifacts\. .\src\ClassLibrary\.
-- dotnet publish --no-build --version-suffix %LABEL% -o artifacts\ConsoleApplication\. .\src\ConsoleApplication\.
+- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts\. .\src\ClassLibrary\.
+- dotnet publish -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts\ConsoleApplication\. .\src\ConsoleApplication\.
 artifacts:
   - path: artifacts\**\*.*
 cache:
