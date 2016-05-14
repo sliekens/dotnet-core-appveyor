@@ -21,7 +21,7 @@ build_script:
 - dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard14
 - dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard15
 - dotnet publish -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts\ConsoleApplication .\src\ConsoleApplication
-test_scipt:
+test_script:
 - dotnet test -c %CONFIGURATION% --no-build .\test\MyFirstUnitTests
 artifacts:
 - path: artifacts\**\*.*
