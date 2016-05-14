@@ -14,13 +14,13 @@ environment:
 build_script:
 - appveyor-retry dotnet restore -v Minimal
 - dotnet build **\project.json -c %CONFIGURATION%
-- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard10
-- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard11
-- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard12
-- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard13
-- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard14
-- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard15
-- dotnet publish -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts\ConsoleApplication .\src\ConsoleApplication
+- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard10\project.json
+- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard11\project.json
+- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard12\project.json
+- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard13\project.json
+- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard14\project.json
+- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\src\LibNETStandard15\project.json
+- dotnet publish -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts\ConsoleApplication .\src\ConsoleApplication\project.json
 test_script:
 - dotnet test -c %CONFIGURATION% --no-build .\test\MyFirstUnitTests
 artifacts:
