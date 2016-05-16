@@ -1,26 +1,26 @@
 {
-  "version": "1.0.0-*",
-  "dependencies": {
-    "NETStandard.Library": {
-      "version": "1.0.0-rc2-*"
+    "version": "1.0.0-*",
+    "dependencies": {
+        "NETStandard.Library": {
+            "version": "1.0.0-rc2-*"
+        }
+    },
+    "frameworks": {
+        "netstandard1.5": {
+            "imports": [
+                "dotnet5.5",
+                "portable-win81+wp81",
+                "portable-net45+wp8",
+                "portable-net45+win8+wp8",
+                "portable-wp81+wpa81",
+                "portable-win81+wp81+wpa81",
+                "portable-net45+win8+wpa81+wp8",
+                "portable-net45+win8",
+                "portable-net45+win8+wpa81",
+                "portable-win81+wpa81",
+                "portable-net451+win81",
+                "portable-net451+win81+wpa81"
+            ]
+        }
     }
-  },
-  "frameworks": {
-    "netstandard1.5": { 
-      "imports": [
-        "dotnet5.5",
-        "portable-win81+wp81",
-        "portable-net45+wp8",
-        "portable-net45+win8+wp8",
-        "portable-wp81+wpa81",
-        "portable-win81+wp81+wpa81",
-        "portable-net45+win8+wpa81+wp8",
-        "portable-net45+win8",
-        "portable-net45+win8+wpa81",
-        "portable-win81+wpa81",
-        "portable-net451+win81",
-        "portable-net451+win81+wpa81"
-      ]
-    }
-  }
 }

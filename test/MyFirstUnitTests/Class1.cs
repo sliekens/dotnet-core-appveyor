@@ -20,7 +20,7 @@ namespace MyFirstUnitTests
         {
             return x + y;
         }
-        
+
         [Theory]
         [InlineData(3)]
         [InlineData(5)]
