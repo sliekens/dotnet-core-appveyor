@@ -6,7 +6,7 @@ platform: Any CPU
 init:
 - ps: $Env:LABEL = "CI" + $Env:APPVEYOR_BUILD_NUMBER.PadLeft(5, "0")
 install:
-- appveyor DownloadFile 'https://go.microsoft.com/fwlink/?LinkID=798398'
+- appveyor DownloadFile https://go.microsoft.com/fwlink/?LinkID=798398
 - DotNetCore.1.0.0.RC2-SDK.Preview1-x64 /quiet
 environment:
   PATH: $(PATH);$(PROGRAMFILES)\dotnet\
