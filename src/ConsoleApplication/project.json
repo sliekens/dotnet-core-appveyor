@@ -1,25 +1,26 @@
 {
-    "version": "1.0.0-*",
-    "buildOptions": {
-        "debugType": "portable",
-        "emitEntryPoint": true
-    },
-    "dependencies": {
-        "LibNETStandard10": { "target": "project" },
-        "LibNETStandard11": { "target": "project" },
-        "LibNETStandard12": { "target": "project" },
-        "LibNETStandard13": { "target": "project" },
-        "LibNETStandard14": { "target": "project" },
-        "LibNETStandard15": { "target": "project" }
-    },
-    "frameworks": {
-        "netcoreapp1.0": {
-            "dependencies": {
-                "Microsoft.NETCore.App": {
-                    "type": "platform",
-                    "version": "1.0.0"
-                }
-            }
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "LibNETStandard10": { "target": "project" },
+    "LibNETStandard11": { "target": "project" },
+    "LibNETStandard12": { "target": "project" },
+    "LibNETStandard13": { "target": "project" },
+    "LibNETStandard14": { "target": "project" },
+    "LibNETStandard15": { "target": "project" },
+    "LibNETStandard16": { "target": "project" }
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
         }
+      }
     }
+  }
 }
