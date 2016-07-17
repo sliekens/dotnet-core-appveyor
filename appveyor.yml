@@ -8,8 +8,9 @@ environment:
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
 init:
 - ps: $Env:LABEL = "CI" + $Env:APPVEYOR_BUILD_NUMBER.PadLeft(5, "0")
-build_script:
+before_build:
 - appveyor-retry dotnet restore -v Minimal
+build_script:
 - dotnet build "src\LibNETStandard10" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
 - dotnet pack "src\LibNETStandard10" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet build "src\LibNETStandard11" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
