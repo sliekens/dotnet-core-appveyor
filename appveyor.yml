@@ -12,20 +12,21 @@ before_build:
 - appveyor-retry dotnet restore -v Minimal
 build_script:
 - dotnet build "src\LibNETStandard10" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet pack "src\LibNETStandard10" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet build "src\LibNETStandard11" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet pack "src\LibNETStandard11" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet build "src\LibNETStandard12" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet pack "src\LibNETStandard12" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet build "src\LibNETStandard13" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet pack "src\LibNETStandard13" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet build "src\LibNETStandard14" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet pack "src\LibNETStandard14" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet build "src\LibNETStandard15" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet pack "src\LibNETStandard15" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet build "src\LibNETStandard16" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
-- dotnet pack "src\LibNETStandard16" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet build "src\ConsoleApplication" -c %CONFIGURATION% --no-dependencies --version-suffix %LABEL%
+after_build:
+- dotnet pack "src\LibNETStandard10" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
+- dotnet pack "src\LibNETStandard11" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
+- dotnet pack "src\LibNETStandard12" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
+- dotnet pack "src\LibNETStandard13" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
+- dotnet pack "src\LibNETStandard14" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
+- dotnet pack "src\LibNETStandard15" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
+- dotnet pack "src\LibNETStandard16" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts
 - dotnet publish "src\ConsoleApplication" -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o artifacts\ConsoleApplication
 test_script:
 - dotnet test "test\MyFirstUnitTests" -c %CONFIGURATION%
