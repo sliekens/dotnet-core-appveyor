@@ -5,7 +5,6 @@ This repository contains a few .NET Core sample projects and unit tests that are
 
 Points of interest:
  - the appveyor.yml file contains the build script configuration
- - the console app/libraries are based on the Visual Studio templates with minor modifications
- - the unit tests use xUnit, all sample tests are taken from this page: https://xunit.github.io/docs/getting-started-dotnet-core.html
-
-Note: the build is broken by design to demonstrate build breakage by failed unit tests.
+ - all code projects are based on the Visual Studio templates, with minor modifications to the project.json files
+ - unit tests use xUnit
+     - https://xunit.github.io/docs/getting-started-dotnet-core.html
